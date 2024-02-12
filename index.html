@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços e Planos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header nav {
+            background-color: #007bff;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 1rem 0;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero {
+            background-color: #f8f9fa;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px 0;
+            gap: 20px;
+        }
+
+        .youtube-video {
+            width: 560px;
+            height: 315px;
+        }
+
+        .video-description {
+            max-width: 400px;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+            position: relative;
+        }
+
+        .video-description::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -20px;
+            transform: translateY(-50%);
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent #f8f9fa transparent transparent;
+        }
+
+        .plans {
+            display: flex;
+            justify-content: space-around;
+            padding: 2rem 0;
+        }
+
+        .plan {
+            border: 1px solid #dee2e6;
+            padding: 1rem;
+            width: 30%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .plan:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .plan ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contact-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border-radius: 5px;
+        }
+
+        .contact-btn:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        .social-container {
+            border: 2px solid #ffffff;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 24px;
+        }
+
+        .social-links a:hover {
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Sobre</a>
+            <a href="#">Planos</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Descubra os Melhores Planos para Você!</h1>
+            <p>Explore nossos planos Basic, Medium e Hard.</p>
+        </section>
+        <!-- Seção do Vídeo -->
+        <div class="video-container">
+            <iframe class="youtube-video" src="https://www.youtube.com/embed/bydRD0taXIY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-description">
+                <p>🎥 Confira nosso vídeo extremamente interessante sobre os serviços que oferecemos. Descubra como podemos ajudá-lo a alcançar seus objetivos com nossos planos exclusivos!</p>
+            </div>
+        </div>
+        <!-- Seção dos Planos -->
+        <section class="plans">
+            <article class="plan interactive" id="basic">
+                <h2>Basic</h2>
+                <p>Perfeito para começar</p>
+                <ul>
+                    <li>✔️ Acesso limitado</li>
+                    <li>✔️ 100GB de armazenamento</li>
+                    <li>✔️ Suporte durante horário comercial</li>
+                </ul>
+                <button class="contact-btn">Entrar em Contato</button>
+            </article>
+            <article class="plan interactive" id="medium">
+                <h2>Medium</h2>
+                <p>Ideal para profissionais</p>
+                <ul>
+                    <li>✔️ Acesso total</li>
+                    <li>✔️ 1TB de armazenamento</li>
+                    <li>✔️ Suporte 24/7</li>
+                </ul>
+                <button class="contact-btn">Entrar em Contato</button>
+            </article>
+            <article class="plan interactive" id="hard">
+                <h2>Hard</h2>
+                <p>Para empresas</p>
+                <ul>
+                    <li>✔️ Acesso total e prioritário</li>
+                    <li>✔️ Armazenamento ilimitado</li>
+                    <li>✔️ Consultoria e suporte dedicado</li>
+                </ul>
+                <button class="contact-btn">Entrar em Contato</button>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Seu Serviço. Todos os direitos reservados.</p>
+        <div class="social-container">
+            <div class="social-links">
+                <a href="https://instagram.com/seuusuario" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="https://twitter.com/seuusuario" target="_blank"><i class="fa-brands fa-x-twitter"></i> Twitter</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
